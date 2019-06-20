@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1>chat</h1>
+    <h1 class="pages-titles">CHAT</h1>
   </div>
 </template>
 

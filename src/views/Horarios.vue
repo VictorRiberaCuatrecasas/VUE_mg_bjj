@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1 class="horarios-title">HORARIOS</h1>
+    <h1 class="pages-titles">HORARIOS</h1>
 
     <div>
       <!-- FILIAL MG TEAM GRANOLLERS -->
@@ -308,26 +308,6 @@ td {
   border: 1px solid black;
   text-align: center;
   height: 4em;
-}
-.horarios-title {
-  margin: 10px 0 0 20px;
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-  letter-spacing: 2px;
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 20px;
-    width: 100%;
-  }
 }
 
 .timetable {

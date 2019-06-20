@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1>contacto</h1>
+    <h1 class="pages-titles">CONTACTO</h1>
   </div>
 </template>
 

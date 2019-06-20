@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1>galeria</h1>
+    <h1 class="pages-titles">GALERÍA</h1>
   </div>
 </template>
 

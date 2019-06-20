@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1>tecnicas</h1>
+    <h1 class="pages-titles">TÉCNICAS</h1>
   </div>
 </template>
 

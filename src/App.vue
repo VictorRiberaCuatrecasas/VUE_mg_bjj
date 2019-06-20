@@ -34,9 +34,26 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
-  background-attachment: fixed;
+  width: 100%;
+  background-attachment: fixed !important;
   background-position: center center;
 }
+
+/* .app-background:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: url(assets/backgroundgorila1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
 .main-header {
   height: 6em;
   background-image: url(assets/banner.png);
@@ -79,5 +96,26 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.pages-titles {
+  margin: 10px 0 0 20px;
+  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  letter-spacing: 2px;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 20px;
+    width: 100%;
+  }
 }
 </style>

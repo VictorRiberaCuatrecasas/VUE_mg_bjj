@@ -25,7 +25,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-    <h1>homepage</h1>
+    <h1 class="pages-titles">HOME</h1>
   </div>
 </template>
 

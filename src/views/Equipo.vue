@@ -26,7 +26,7 @@
       </v-expansion-panels>
     </div>
 
-    <h1>equipo</h1>
+    <h1 class="pages-titles">EQUIPO</h1>
   </div>
 </template>
 
