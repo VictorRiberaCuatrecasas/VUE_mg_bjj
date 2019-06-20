@@ -1,6 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Nosotros from "./views/Nosotros.vue";
+import Equipo from "./views/Equipo.vue";
+import Tecnicas from "./views/Tecnicas.vue";
+import Galeria from "./views/Galeria.vue";
+import Horarios from "./views/Horarios.vue";
+import Chat from "./views/Chat.vue";
+import Contacto from "./views/Contacto.vue";
 
 Vue.use(Router);
 
@@ -12,13 +19,39 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      path: "/nosotros",
+      name: "nosotros",
+      component: Nosotros
+    },
+    {
+      path: "/equipo",
+      name: "equipo",
+      component: Equipo
+    },
+    {
+      path: "/tecnicas",
+      name: "tecnicas",
+      component: Tecnicas
+    },
+    {
+      path: "/galeria",
+      name: "galeria",
+      component: Galeria
+    },
+    {
+      path: "/horarios",
+      name: "horarios",
+      component: Horarios
+    },
+    {
+      path: "/chat",
+      name: "chat",
+      component: Chat
+    },
+    {
+      path: "/contacto",
+      name: "contacto",
+      component: Contacto
     }
   ]
 });
