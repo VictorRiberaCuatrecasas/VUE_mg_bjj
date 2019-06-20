@@ -189,7 +189,7 @@
                 <v-expansion-panels>
                   <v-expansion-panel class="timetable horarios-head" popout>
                     <v-expansion-panel-content ripple>
-                      <div slot="header" class="darken">SABADO</div>
+                      <div slot="header" class="darken">SÁBADO</div>
                       <v-card>
                         <table class="dayTable darken">
                           <tr>
