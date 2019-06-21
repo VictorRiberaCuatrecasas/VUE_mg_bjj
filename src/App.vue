@@ -9,7 +9,6 @@
         <v-content class="scrollable-body">
           <router-view></router-view>
         </v-content>
-        <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
       </div>
     </div>
   </v-app>
