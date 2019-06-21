@@ -1,13 +1,16 @@
 <template>
   <v-app>
-    <div class="app-background">
-      <div class="main-header">
-        <h1 class="mgTitle">MG TEAM BJJ</h1>
-      </div>
+    <div>
+      <div class="app-background background-fix">
+        <div class="main-header">
+          <h1 class="mgTitle">MG TEAM BJJ</h1>
+        </div>
 
-      <v-content>
-        <router-view></router-view>
-      </v-content>
+        <v-content class="scrollable-body">
+          <router-view></router-view>
+        </v-content>
+        <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+      </div>
     </div>
   </v-app>
 </template>
@@ -27,7 +30,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-.app-background {
+/* .app-background {
   background-image: url(assets/backgroundgorila.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -37,23 +40,30 @@ export default {
   width: 100%;
   background-attachment: fixed !important;
   background-position: center center;
-}
+} */
 
-/* .app-background:before {
-  content: "";
-  display: block;
+.app-background {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   background: url(assets/backgroundgorila1.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.scrollable-body {
+  overflow: scroll;
+  height: 100%;
+}
+/* .background-fix {
+  background-color: #909090;
+  height: 100%;
+  width: 100%;
 } */
+
 .main-header {
   height: 6em;
   background-image: url(assets/banner.png);
@@ -103,19 +113,16 @@ export default {
   font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
   letter-spacing: 2px;
-  animation-duration: 1s;
-  animation-name: slidein;
+  animation-duration: 2s;
+  animation-name: fadein;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyframes fadein {
+  0% {
+    opacity: 0;
   }
-
-  to {
-    margin-left: 20px;
-    width: 100%;
+  100% {
+    opacity: 1;
   }
 }
 </style>

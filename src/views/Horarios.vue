@@ -266,7 +266,7 @@
                     <v-card>
                       <table class="dayTable darken">
                         <tr>
-                          <td class="horarios-hora">19:30 - 21:100</td>
+                          <td class="horarios-hora">19:30 - 21:00</td>
                           <td class="horarios-bjj">BJJ</td>
                         </tr>
                       </table>
@@ -282,7 +282,7 @@
                     <v-card>
                       <table class="dayTable darken">
                         <tr>
-                          <td class="horarios-hora">19:30 - 21:100</td>
+                          <td class="horarios-hora">19:30 - 21:00</td>
                           <td class="horarios-bjj">BJJ</td>
                         </tr>
                       </table>
