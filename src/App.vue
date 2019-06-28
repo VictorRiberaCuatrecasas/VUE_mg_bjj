@@ -1,12 +1,12 @@
 <template>
   <v-app>
     <div>
-      <div class="app-background background-fix">
+      <div class="app-background background-fix scrollable-body">
         <div class="main-header">
           <h1 class="mgTitle">MG TEAM BJJ</h1>
         </div>
-
-        <v-content class="scrollable-body">
+        <Navbar></Navbar>
+        <v-content>
           <router-view></router-view>
         </v-content>
       </div>
@@ -15,8 +15,13 @@
 </template>
 
 <script>
+import Navbar from "./components/Navbar.vue";
+
 export default {
   name: "App",
+  components: {
+    Navbar
+  },
 
   data() {
     return {
@@ -29,7 +34,9 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-/* .app-background {
+/* 
+ >>>>ALTERNARIVE BACKGROUND WITH FIXED POSITION (DOESNT WORK WELL ON MOBILE)
+.pap-background {                   
   background-image: url(assets/backgroundgorila.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -105,23 +112,5 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-.pages-titles {
-  margin: 10px 0 0 20px;
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-  letter-spacing: 2px;
-  animation-duration: 2s;
-  animation-name: fadein;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 </style>
