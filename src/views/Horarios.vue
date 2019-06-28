@@ -295,6 +295,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
+    <p class="horarios-expanding-fix">quickfix</p>
   </div>
 </template>
 
@@ -304,6 +305,10 @@ export default {};
 
 <style >
 /*HORARIOS PAGE TABLE DECORATION*/
+.horarios-expanding-fix {
+  margin-top: 5em;
+  color: #909090;
+}
 td {
   border: 1px solid black;
   text-align: center;

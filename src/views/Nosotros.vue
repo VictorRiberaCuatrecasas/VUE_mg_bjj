@@ -27,7 +27,7 @@
     </div>
 
     <h1 class="pages-titles">NOSOTROS</h1>
-    <v-img :src="require('../assets/banner.png')"></v-img>
+    <v-img :src="require('@/assets/banner.png')"></v-img>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus cupiditate explicabo doloribus nesciunt perspiciatis neque illum, unde quo error dolorem molestiae rem quisquam, corrupti incidunt ex ullam deserunt obcaecati minus voluptatibus
       <v-img
