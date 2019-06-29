@@ -3,40 +3,47 @@
     <!-- NAVBAR -->
 
     <div class="test">
-      <v-carousel delimiter-icon="stop" class="test3">
-        <v-carousel-item>
-          <v-img class="test1" :src="require('@/assets/didacmarc.jpg')"></v-img>
-        </v-carousel-item>
-        <v-carousel-item>
-          <v-img class="test1" :src="require('@/assets/equipo.jpg')"></v-img>
-        </v-carousel-item>
-        <v-carousel-item>
-          <v-img class="test1" :src="require('@/assets/graduacion1.jpg')"></v-img>
-        </v-carousel-item>
-        <v-carousel-item>
-          <v-img class="test1" :src="require('@/assets/ferranpodio.jpg')"></v-img>
-        </v-carousel-item>
+      <v-carousel delimiter-icon="stop" class="carouselDiv">
+        <v-carousel-item class="carouselImage" v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
       </v-carousel>
+      <p>tessdfsfdsdfst</p>
     </div>
   </div>
 </template>
-
-
+<!--HACER UN V-FOR PONER POSITION ABSOLUTE TEXTO ENCIMA IMAGES, PONER DATA CON TEXT-->
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      items: [
+        {
+          src: require("@/assets/didacmarc.jpg")
+        },
+        {
+          src: require("@/assets/equipo.jpg")
+        },
+        {
+          src: require("@/assets/graduacion1.jpg")
+        },
+        {
+          src: require("@/assets/ferranpodio.jpg")
+        },
+        {
+          src: require("@/assets/ferranainoa.jpg")
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
-.test {
-  height: 500em;
-}
-
-.test1 {
-  height: 100%;
+.carouselImage {
+  height: 20em;
   width: 100%;
 }
-.test3 {
+.carouselDiv {
   max-height: 20em;
 }
 </style>
