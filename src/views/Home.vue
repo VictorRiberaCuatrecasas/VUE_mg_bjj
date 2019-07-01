@@ -20,6 +20,9 @@ export default {
           src: require("@/assets/victorferran.jpg")
         },
         {
+          src: require("@/assets/jacare.jpg")
+        },
+        {
           src: require("@/assets/cesar.jpg")
         },
         {
@@ -37,9 +40,9 @@ export default {
         {
           src: require("@/assets/ainoa1.jpg")
         },
-        {
-          src: require("@/assets/marsal.jpg")
-        },
+        // {
+        //   src: require("@/assets/marsal.jpg")
+        // },
         {
           src: require("@/assets/mestrevictor.jpg")
         },
@@ -72,11 +75,10 @@ export default {
 
 <style>
 .carouselImage {
-  height: 20em;
   width: 100%;
 }
 .carouselDiv {
-  max-height: 20em;
+  height: 100%;
 }
 </style>
 
