@@ -100,6 +100,7 @@
       </p>
     </div>
     <iframe
+      style="margin-bottom:2em"
       class="contactMap"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11929.326592613184!2d2.2834188!3d41.6269623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xecbca751aae542f5!2sINTERNACIONAL+GYM!5e0!3m2!1ses!2ses!4v1561744439176!5m2!1ses!2ses"
       allowfullscreen

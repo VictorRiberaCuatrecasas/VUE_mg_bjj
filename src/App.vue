@@ -1,15 +1,15 @@
 <template>
   <v-app>
     <div>
-      <div class="app-background background-fix scrollable-body">
+      <div class="app-background">
         <div class="main-header">
           <h1 class="mgTitle">MG TEAM BJJ</h1>
         </div>
         <Navbar></Navbar>
-        <v-content>
-          <router-view></router-view>
+        <v-content class="footer1">
+          <router-view class="footer2"></router-view>
+          <Footer class="footer3"></Footer>
         </v-content>
-        <Footer></Footer>
       </div>
     </div>
   </v-app>
@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
 /* 
@@ -51,6 +52,14 @@ export default {
   background-position: center center;
 } */
 
+/* .background-fix {
+  background-color: #909090;
+  height: 100%;
+  width: 100%;
+} */
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .app-background {
   position: fixed;
   left: 0;
@@ -62,16 +71,8 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-.scrollable-body {
   overflow: scroll;
-  height: 100%;
 }
-/* .background-fix {
-  background-color: #909090;
-  height: 100%;
-  width: 100%;
-} */
 
 .main-header {
   height: 6em;
@@ -115,5 +116,20 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+/* //FOOTER */
+.footer1 {
+  position: relative;
+  min-height: calc(100% - 90px);
+}
+.footer2 {
+  padding-bottom: 90px;
+}
+.footer3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
 }
 </style>

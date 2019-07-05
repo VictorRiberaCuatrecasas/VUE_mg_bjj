@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- NAVBAR -->
-
     <div class="test">
       <v-carousel hide-delimiters class="carouselDiv">
         <v-carousel-item class="carouselImage" v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
