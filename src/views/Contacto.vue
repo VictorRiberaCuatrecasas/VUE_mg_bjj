@@ -14,7 +14,7 @@
             <v-alert
               style="margin-top:2em"
               :value="true"
-              color="error"
+              color="error darken-1"
               icon="warning"
               outline
             >Temporalmente desabilitado.</v-alert>

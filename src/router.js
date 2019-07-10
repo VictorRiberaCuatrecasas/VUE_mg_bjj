@@ -8,6 +8,7 @@ import Galeria from "./views/Galeria.vue";
 import Horarios from "./views/Horarios.vue";
 import Chat from "./views/Chat.vue";
 import Contacto from "./views/Contacto.vue";
+import Cinturones from "./views/Cinturones.vue";
 
 Vue.use(Router);
 
@@ -52,6 +53,11 @@ export default new Router({
       path: "/contacto",
       name: "contacto",
       component: Contacto
+    },
+    {
+      path: "/equipo/cinturones",
+      name: "cinturones",
+      component: Cinturones
     }
   ]
 });
