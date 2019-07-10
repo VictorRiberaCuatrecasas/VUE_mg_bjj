@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-lazy-image style="width:100%" :src="require('@/assets/contactanosimg.png')" />
     <!-- CONTACT FORM -->
     <div class="formButton">
       <v-layout row justify-center>

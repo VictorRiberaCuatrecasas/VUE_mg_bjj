@@ -8,7 +8,13 @@
       <br />
       <br />A continuación, os ofrecemos una amplia gama de técnicas divididas en los apartados de Derribo, Pasaje y Guardia.
     </p>
-
+    <v-alert
+      style="margin-top:2em"
+      :value="true"
+      color="error darken-4"
+      icon="warning"
+      outline
+    >Pendiente de subida de videos.</v-alert>
     <!-- PANELS -->
     <!-- ARRIBA -->
     <v-expansion-panel popout>

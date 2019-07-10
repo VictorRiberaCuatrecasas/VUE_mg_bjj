@@ -1,15 +1,39 @@
 <template>
   <div>
-    <div>
-      <h1 class="pages-titles">NOSOTROS</h1>
-      <v-img :src="require('@/assets/banner.png')"></v-img>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus cupiditate explicabo doloribus nesciunt perspiciatis neque illum, unde quo error dolorem molestiae rem quisquam, corrupti incidunt ex ullam deserunt obcaecati minus voluptatibus
-        <v-img
-          src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct"
-        ></v-img>nostrum in recusandae, sequi ut? Maiores, maxime totam impedit ex officiis quae modi animi distinctio nam consequuntur laudantium cupiditate amet fuga magnam esse ut temporibus in similique et assumenda beatae necessitatibus? Blanditiis similique aperiam nesciunt hic ducimus sunt totam. Obcaecati optio aperiam sunt totam dolores quod, eveniet adipisci nemo accusamus placeat? Minus est ipsa tempora nihil, placeat aut maiores illo deserunt repellendus voluptates nam vero ut adipisci pariatur fugiat, nostrum eveniet. Totam cupiditate commodi, quisquam eum doloribus quo culpa natus consequuntur nihil error autem sint laudantium et nisi dolorem! Dignissimos debitis, voluptatum suscipit odio ipsam quo dolor beatae earum ex amet maiores fugit tenetur, voluptatibus totam eius soluta aliquid eum delectus animi. Eum laudantium cum atque placeat totam perspiciatis dolor saepe facilis quae rem illum consequatur, error, nulla eaque reiciendis numquam repellendus, ipsa fugit minima quod aperiam aut vero? Sequi aspernatur neque repellendus iusto, obcaecati reprehenderit numquam cum odit. Officia possimus cumque consectetur, sed ea nostrum tempore? Quae molestias consequuntur, laborum rerum aliquam deleniti nihil officiis nulla alias, ea, vero cupiditate est modi accusamus harum delectus magni voluptatum temporibus repellat non quia eos enim. Cumque consectetur quidem itaque! Porro voluptatem dolore aliquid quasi odio consequuntur est distinctio perferendis officiis vel nihil tempore in consectetur quas quae harum sequi, fuga debitis, at voluptas recusandae? Aperiam facilis, magni excepturi dolore exercitationem cumque natus. Sunt iusto adipisci temporibus voluptas pariatur praesentium libero quaerat natus dolores aperiam corporis, soluta culpa consequuntur. Corrupti voluptatibus minima, eaque maiores adipisci cupiditate repellat doloremque esse nulla quia, illo, itaque nostrum? Quae autem vitae nostrum aspernatur. Eius sed, commodi cum quaerat rem sint praesentium officiis. Libero excepturi quaerat veniam a magnam voluptate exercitationem quo suscipit fugiat fuga quos qui facilis recusandae beatae possimus, architecto ea sit obcaecati repellendus expedita quae non assumenda tenetur? Nisi modi libero eligendi architecto totam commodi illum vitae ut quos quo, cupiditate ratione in laboriosam est quidem ipsam voluptas atque, consequuntur dignissimos error dolores, dolor quae eveniet? Ab dolore molestias aperiam incidunt, cupiditate dolores earum exercitationem praesentium? Adipisci assumenda nemo cum recusandae laborum, mollitia quos repudiandae fugit possimus sed vitae aspernatur explicabo. Laborum doloremque explicabo consequatur error maxime, ipsa nobis dolor? Eveniet, in. Mollitia itaque voluptatibus possimus quo. Dolore quasi itaque vitae adipisci. Atque, impedit et rem doloremque perferendis placeat officia quas deserunt non? Cumque aperiam quos beatae eos nam, rerum provident dicta consectetur numquam veritatis, atque laudantium! Earum error minima ullam velit quae. Facilis hic modi obcaecati veniam reprehenderit architecto, praesentium iste eos culpa debitis quia ipsa, autem voluptatibus qui recusandae eveniet minus. Quo culpa vero vel voluptatum, incidunt asperiores provident, accusamus totam veritatis odit ratione est recusandae reprehenderit deserunt rerum dolorem, omnis temporibus vitae. Aliquid ipsum eius mollitia dolores quo nam provident? Nostrum nemo eaque earum quisquam exercitationem modi, rerum quo quas adipisci, vero id cupiditate aperiam veritatis nam dicta incidunt velit!
-      </p>
+    <v-lazy-image style="width:100%" :src="require('@/assets/nosotros.jpg')" />
+    <p class="equipoIntroText">
+      El equipo
+      <strong>MG</strong> nació en Fortaleza (Brasil) en 1990 fruto de la unión de los luchadores Marcus
+      Aurelio y Gigueto, es aquí donde Igor Lima entrenó hasta ser graduado a cinturón negro en
+      2010. En 2015 Igor viajó a Granollers (España) para tomar las riendas de un equipo de bjj ya
+      existente, que al cabo del tiempo, pasó a ser la filial central en España del equipo
+      <strong>MG</strong>.
+    </p>
+    <div style="width:95%;margin:auto">
+      <v-lazy-image class="logosImg" :src="require('@/assets/mglogo.png')" />
+      <v-lazy-image class="logosImg" :src="require('@/assets/igorlogo.png')" />
+      <v-lazy-image
+        style="padding-left:10px"
+        class="logosImg"
+        :src="require('@/assets/animallogo.png')"
+      />
+      <v-lazy-image class="logosImg" :src="require('@/assets/internacionallogo.png')" />
     </div>
+    <p class="equipoIntroText">
+      Actualmente, el equipo conocido como
+      <strong>MG Barcelona</strong>, consta de 3 filiales:
+      <br />
+      <br />
+      <strong>MG Granollers</strong> (La Torreta): Dirigida por el profesor Igor Lima.
+      <br />
+      <strong>Animal BJJ</strong> (Cardedeu): Dirigida por los profesores Javi, Cesar y Miguel.
+      <br />
+      <strong>Internacional Gym</strong> (Canovelles): Dirigida por el profesor Edu Bigorda.
+      <br />
+      <br />El quipo ofrece gran cantidad de horarios para poder entrenar cada día ya sea de mañanas o
+      tardes, en un ambiente muy familiar, envuelto en una filosofía de vida de
+      <strong>disciplina y respeto.</strong>
+    </p>
   </div>
 </template>
 
@@ -21,4 +45,8 @@ export default {};
 
 
 <style>
+.logosImg {
+  width: 150px;
+  height: 150px;
+}
 </style>

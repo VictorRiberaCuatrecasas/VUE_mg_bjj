@@ -83,7 +83,8 @@ body {
     sans-serif;
   color: white;
   letter-spacing: 2px;
-  padding-top: 1.2em;
+  padding-top: 1.1em;
+  border: 3px solid red;
 }
 .mgTitle {
   font-size: 35px;

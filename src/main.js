@@ -1,10 +1,12 @@
 import Vue from "vue";
-import './plugins/fontawesome'
+import "./plugins/fontawesome";
 import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 //
+import { VLazyImagePlugin } from "v-lazy-image";
+Vue.use(VLazyImagePlugin);
 
 Vue.config.productionTip = false;
 
