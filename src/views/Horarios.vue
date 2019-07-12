@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-lazy-image style="width:100%" :src="require('@/assets/imghorarios.jpg')" />
+    <v-img class="headerPics" :src="require('@/assets/imghorarios.jpg')" />
     <div style="margin-top: 15px">
       <!-- FILIAL MG TEAM GRANOLLERS -->
 

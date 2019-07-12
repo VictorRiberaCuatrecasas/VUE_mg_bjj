@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-lazy-image style="width:100%" :src="require('@/assets/nosotros.jpg')" />
+    <v-img class="headerPics" :src="require('@/assets/nosotros.jpg')" />
     <p class="equipoIntroText">
       El equipo
       <strong>MG</strong> nació en Fortaleza (Brasil) en 1990 fruto de la unión de los luchadores Marcus
@@ -9,7 +9,7 @@
       existente, que al cabo del tiempo, pasó a ser la filial central en España del equipo
       <strong>MG</strong>.
     </p>
-    <div style="width:95%;margin:auto">
+    <div class="logosContainer">
       <v-lazy-image class="logosImg" :src="require('@/assets/mglogo.png')" />
       <v-lazy-image class="logosImg" :src="require('@/assets/igorlogo.png')" />
       <v-lazy-image
@@ -30,7 +30,8 @@
       <br />
       <strong>Internacional Gym</strong> (Canovelles): Dirigida por el profesor Edu Bigorda.
       <br />
-      <br />El quipo ofrece gran cantidad de horarios para poder entrenar cada día ya sea de mañanas o
+      <br />El Equipo ofrece gran cantidad de
+      <router-link to="/horarios">horarios</router-link>para poder entrenar cada día ya sea de mañanas o
       tardes, en un ambiente muy familiar, envuelto en una filosofía de vida de
       <strong>disciplina y respeto.</strong>
     </p>
@@ -45,6 +46,11 @@ export default {};
 
 
 <style>
+.logosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .logosImg {
   width: 150px;
   height: 150px;

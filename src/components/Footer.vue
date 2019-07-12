@@ -22,9 +22,13 @@
       </button>
     </div>
     <hr class="hrFooter" />
-    <div class="copyright">MG Team &copy; {{ new Date().getFullYear() }}</div>
+    <div class="copyright">
+      MG Team &copy; {{ new Date().getFullYear() }}
+      <br />Developed by: Victor Ribera
+    </div>
   </div>
 </template>
+
 
 
 

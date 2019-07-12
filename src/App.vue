@@ -57,6 +57,7 @@ export default {
   height: 100%;
   width: 100%;
 } */
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -132,5 +133,37 @@ body {
   bottom: 0;
   width: 100%;
   height: 90px;
+}
+
+/* FADE IN UP HEADER PICS */
+.headerPics {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

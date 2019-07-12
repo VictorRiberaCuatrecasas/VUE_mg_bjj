@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <v-img :src="require('@/assets/torneoEquipo.jpg')"></v-img>
+      <v-img class="headerPics" :src="require('@/assets/torneoEquipo.jpg')" />
       <p class="equipoIntroText">
         Aquí podrás ver los miembros que forman el equipo MG en Catalunya y sus respectivos grados. Puedes ver más información sobre el sistema de cinturones
         <router-link to="/equipo/cinturones">aquí</router-link>.
@@ -228,7 +228,34 @@ thead {
   margin-top: 1em;
   margin-bottom: 1em;
   border: 1.5px dotted gray;
-
   padding: 0 3px 0 3px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

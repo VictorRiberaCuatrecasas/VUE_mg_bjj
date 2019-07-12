@@ -1,5 +1,7 @@
 <template>
   <div>
+    <v-img class="headerPics" :src="require('@/assets/cinturonesTop.jpg')" />
+
     <!-- BELTS INFO -->
     <p
       class="equipoIntroText"
@@ -17,21 +19,20 @@
         <v-card>
           <v-img :src="card.src"></v-img>
 
-          <v-card-title class="cardText" primary-title>
-            <div class="cardHeader">
+          <v-card-title :class="card.cabecera" primary-title>
+            <div style="height:40px" class="cardHeader">
               <div class="headline">{{card.cabecera}}</div>
               <v-btn icon @click="arrow(index)">
                 <v-icon
-                  style="margin-bottom:20px"
-                >{{ show != index ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
+                  style="margin-bottom:20px;"
+                  :class="card.cabecera"
+                >{{ show != index ? 'keyboard_arrow_down':'keyboard_arrow_up' }}</v-icon>
               </v-btn>
             </div>
           </v-card-title>
 
           <v-slide-y-transition>
-            <v-card-text class="cardText" v-show="show == index">
-              <v-html>{{card.texto}}</v-html>
-            </v-card-text>
+            <v-card-text v-html="card.texto" :class="card.cabecera" v-show="show == index"></v-card-text>
           </v-slide-y-transition>
         </v-card>
       </v-flex>
@@ -50,19 +51,19 @@ export default {
           cabecera: "Blanco",
           src: require("@/assets/whitebelt.jpg"),
           texto:
-            "El cinturón blanco es el inicio para todos los estudiantes de BJJ. No tiene ningún requisito previo. Algunos instructores y otros profesionales de alto nivel piensan que el entrenamiento de un cinturón blanco debe enfatizar los escapes y el posicionamiento defensivo, ya que un cinturón blanco a menudo peleará desde posiciones inferiores, especialmente cuando se entrena con profesionales más experimentados. La mayoría de las academias además requerirán que un cinturón blanco trabaje para obtener un conjunto de habilidades completo, con un conocimiento de movimientos ofensivos básicos, como finalizaciones comunes y pases de guardia."
+            "El cinturón blanco es el inicio para todos los estudiantes de BJJ. No tiene ningún requisito previo. Algunos instructores y otros profesionales de alto nivel piensan que el entrenamiento de un cinturón blanco debe enfatizar los escapes y el posicionamiento defensivo, ya que un cinturón blanco a menudo peleará desde posiciones inferiores, especialmente cuando se entrena con profesionales más experimentados.<br><br> La mayoría de las academias además requerirán que un cinturón blanco trabaje para obtener un conjunto de habilidades completo, con un conocimiento de movimientos ofensivos básicos, como finalizaciones comunes y pases de guardia."
         },
         {
           cabecera: "Azul",
           src: require("@/assets/bluebelt.jpg"),
           texto:
-            "La IBJJF requiere que un luchador de BJJ siga siendo un cinturón azul por un mínimo de 2 años. El cinturón azul es el segundo rango de adultos. En el nivel del cinturón azul, los estudiantes obtienen una amplia gama de conocimientos técnicos y dedican cientos de horas a aprender cómo implementar estos movimientos de manera eficiente. El cinturón azul es a menudo un rango en el que el estudiante aprende una gran cantidad de técnicas. La IBJJF requiere que un practicante tenga al menos 16 años de edad para recibir un cinturón azul, por lo que oficialmente ingresa al sistema de cinturones para adultos."
+            "La IBJJF requiere que un luchador de BJJ siga siendo un cinturón azul por un mínimo de 2 años. El cinturón azul es el segundo rango de adultos. En el nivel del cinturón azul, los estudiantes obtienen una amplia gama de conocimientos técnicos y dedican cientos de horas a aprender cómo implementar estos movimientos de manera eficiente. El cinturón azul es a menudo un rango en el que el estudiante aprende una gran cantidad de técnicas.<br><br> La IBJJF requiere que un practicante tenga al menos 16 años de edad para recibir un cinturón azul, por lo que oficialmente ingresa al sistema de cinturones para adultos."
         },
         {
           cabecera: "Morado",
           src: require("@/assets/purplebelt.jpg"),
           texto:
-            "La IBJJF requiere que un profesional siga siendo un cinturón morado por un mínimo de 1.5 años. El cinturón morado es el ranking intermedio de adultos en el jiu-jitsu brasileño. Un cinturón púrpura ha adquirido una gran cantidad de conocimiento, y generalmente se les considera calificados para instruir a los estudiantes de menor rango. En otras artes marciales, los estudiantes con una cantidad similar de experiencia a menudo son clasificados como cinturones de nivel negro (instructor)."
+            "La IBJJF requiere que un profesional siga siendo un cinturón morado por un mínimo de 1.5 años. El cinturón morado es el ranking intermedio de adultos en el jiu-jitsu brasileño. Un cinturón púrpura ha adquirido una gran cantidad de conocimiento, y generalmente se les considera calificados para instruir a los estudiantes de menor rango. <br><br>En otras artes marciales, los estudiantes con una cantidad similar de experiencia a menudo son clasificados como cinturones de nivel negro (instructor)."
         },
         {
           cabecera: "Marrón",
@@ -74,7 +75,7 @@ export default {
           cabecera: "Negro",
           src: require("@/assets/blackbelt.jpg"),
           texto:
-            "La IBJJF requiere que un profesional siga siendo un cinturón negro por un mínimo de 31 años. Al igual que con muchas otras artes marciales, el cinturón negro es el cinturón común más alto dentro del jiu-jitsu brasileño, lo que denota un nivel experto de habilidad técnica y práctica. Las estimaciones del tiempo requerido para alcanzar el rango varían, pero todos los titulares de este rango tienen miles de horas de experiencia. Los cinturones negros de jiu-jitsu brasileños a menudo se abordan dentro del arte como profesor, aunque algunas escuelas y organizaciones reservan este honorífico para los cinturones negros de mayor edad."
+            "La IBJJF requiere que un profesional siga siendo un cinturón negro por un mínimo de 31 años. Al igual que con muchas otras artes marciales, el cinturón negro es el cinturón común más alto dentro del jiu-jitsu brasileño, lo que denota un nivel experto de habilidad técnica y práctica. Las estimaciones del tiempo requerido para alcanzar el rango varían, pero todos los titulares de este rango tienen miles de horas de experiencia.<br><br> Los cinturones negros de jiu-jitsu brasileños a menudo se abordan dentro del arte como profesor, aunque algunas escuelas y organizaciones reservan este honorífico para los cinturones negros de mayor edad."
         }
       ]
     };
@@ -103,8 +104,25 @@ export default {
   width: 90%;
   margin: auto;
 }
-.cardText {
-  background-color: gray;
+.Blanco {
+  background-color: white;
+  text-align: justify;
+}
+.Azul {
+  background-color: rgba(43, 43, 172);
+  text-align: justify;
+}
+.Morado {
+  background-color: rgb(114, 17, 93);
+  text-align: justify;
+}
+.Marrón {
+  background-color: rgb(100, 49, 1);
+  text-align: justify;
+}
+.Negro {
+  background-color: black;
+  color: white !important;
   text-align: justify;
 }
 /* .cardText:nth-child(1) {

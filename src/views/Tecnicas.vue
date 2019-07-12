@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-img style="margin-bottom:1em" :src="require('@/assets/tecnicasmain.png')"></v-img>
+    <v-img
+      class="headerPics"
+      style="margin-bottom:1em; "
+      :src="require('@/assets/tecnicasmain.png')"
+    />
     <p class="equipoIntroText">
       El jiu-jitsu brasileño consiste básicamente en llevar a un oponente al suelo, por medio de un derribo, barrido, segado o un lanzamiento con el fin de establecer una lucha de agarres o grappling, utilizando diferentes técnicas, ya sean sumisiones, luxaciones o estrangulaciones, y someterlo.
       <br />
