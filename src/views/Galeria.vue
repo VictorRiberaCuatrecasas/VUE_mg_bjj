@@ -52,11 +52,38 @@
           'https://i.ibb.co/JcdS63d/pic45.jpg',
           'https://i.ibb.co/gmkwW7v/pic46.jpg',
           'https://i.ibb.co/VD3tK1h/pic47.jpg',
-           'https://i.ibb.co/4f7N4Z0/pic48.jpg',
+          'https://i.ibb.co/4f7N4Z0/pic48.jpg',
           'https://i.ibb.co/72JWh4L/pic49.jpg',
           'https://i.ibb.co/mSfgGYW/pic50.jpg',
-           'https://i.ibb.co/tcmGR06/pic51.jpg',
-          
+          'https://i.ibb.co/tcmGR06/pic51.jpg',
+          'https://i.ibb.co/GsSdg2Z/pic52.jpg',
+          'https://i.ibb.co/XLsmT7c/pic53.jpg',
+          'https://i.ibb.co/3cDZNFt/pic54.jpg',
+          'https://i.ibb.co/TH9wbmL/pic55.jpg',
+          'https://i.ibb.co/0C942H0/pic56.jpg',
+          'https://i.ibb.co/swc51Q6/pic57.jpg',
+          'https://i.ibb.co/yhkvCph/pic58.jpg',
+          'https://i.ibb.co/ZHtc3FV/pic59.jpg',
+          'https://i.ibb.co/bRChMhN/pic60.jpg',
+          'https://i.ibb.co/x3Dg6BC/pic61.jpg',
+          'https://i.ibb.co/LQht5Q0/pic62.jpg',
+          'https://i.ibb.co/Sf06bj8/pic63.jpg',
+          'https://i.ibb.co/kSPjRjh/pic64.jpg',
+          'https://i.ibb.co/QfV28Gf/pic65.jpg',
+          'https://i.ibb.co/Fh3bZWd/pic66.jpg',
+          'https://i.ibb.co/m0mBzw7/pic67.jpg',
+          'https://i.ibb.co/pnZLrKr/pic68.jpg',
+          'https://i.ibb.co/FsS1rLF/pic69.jpg',
+          'https://i.ibb.co/ZMshgZb/pic70.jpg',
+          'https://i.ibb.co/JRFygQG/pic71.jpg',
+          'https://i.ibb.co/Wv0FMt0/pic72.jpg',
+          'https://i.ibb.co/3WcZL0D/pic73.jpg',
+          'https://i.ibb.co/j4Spzj4/pic74.jpg',
+          'https://i.ibb.co/PYhwYBQ/pic75.jpg',
+          'https://i.ibb.co/sbB07kj/pic76.jpg',
+          'https://i.ibb.co/cbsD9j9/pic77.jpg',
+          'https://i.ibb.co/QNvZ8Qx/pic78.jpg',
+                    
           
 
           
@@ -71,7 +98,6 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { LightGallery } from "vue-light-gallery";
 
 export default {
@@ -284,6 +310,114 @@ export default {
         {
           title: "",
           url: require("@/assets/galeria/pic51.jpg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic52.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic53.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic54.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic55.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic56.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic57.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic58.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic59.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic60.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic61.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic62.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic63.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic64.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic65.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic66.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic67.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic68.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic69.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic70.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic71.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic72.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic73.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic74.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic75.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic76.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic77.jpeg")
+        },
+        {
+          title: "",
+          url: require("@/assets/galeria/pic78.jpeg")
         }
       ],
       index: null
