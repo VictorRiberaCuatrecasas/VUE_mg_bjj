@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <div>
-      <div class="app-background">
+      <div class="query2">
+        <p>ONLY FOR MOBILE OR SCREENS WITH A MAX WIDTH OF 600PX (TRY ADJUSTING YOUR WINDOW)</p>
+        <v-img style="max-width:300px; margin:auto" :src="require('@/assets/shrink.png')" />
+      </div>
+
+      <div class="app-background query1">
         <div class="main-header">
           <h1 class="mgTitle">MG TEAM BJJ</h1>
         </div>
@@ -37,6 +42,17 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+
+@media (min-width: 600px) {
+  .query1 {
+    display: none;
+  }
+  .query2 {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10%;
+  }
+}
 
 /* 
  >>>>ALTERNARIVE BACKGROUND WITH FIXED POSITION (DOESNT WORK WELL ON MOBILE)
