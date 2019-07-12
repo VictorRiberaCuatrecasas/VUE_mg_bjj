@@ -83,7 +83,7 @@
           'https://i.ibb.co/sbB07kj/pic76.jpg',
           'https://i.ibb.co/cbsD9j9/pic77.jpg',
           'https://i.ibb.co/QNvZ8Qx/pic78.jpg',
-                    
+
           
 
           
@@ -448,7 +448,7 @@ export default {
   cursor: pointer;
 
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(240, 14, 52, 0.801);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.801);
 }
 .galleryFlex {
   display: flex;

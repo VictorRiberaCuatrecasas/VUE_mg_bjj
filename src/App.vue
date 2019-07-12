@@ -2,7 +2,7 @@
   <v-app>
     <div>
       <div class="query2">
-        <p>ONLY FOR MOBILE OR SCREENS WITH A MAX WIDTH OF 600PX (TRY ADJUSTING YOUR WINDOW)</p>
+        <p>ONLY FOR MOBILE OR SCREENS WITH A MAX WIDTH OF 750PX (TRY ADJUSTING YOUR WINDOW)</p>
         <v-img style="max-width:300px; margin:auto" :src="require('@/assets/shrink.png')" />
       </div>
 
@@ -43,7 +43,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .query1 {
     display: none;
   }
