@@ -31,7 +31,7 @@
       <strong>Internacional Gym</strong> (Canovelles): Dirigida por el profesor Edu Bigorda.
       <br />
       <br />El Equipo ofrece gran cantidad de
-      <router-link to="/horarios">horarios</router-link>para poder entrenar cada día ya sea de mañanas o
+      <router-link to="/horarios">horarios</router-link>&nbsp;para poder entrenar cada día ya sea de mañanas o
       tardes, en un ambiente muy familiar, envuelto en una filosofía de vida de
       <strong>disciplina y respeto.</strong>
     </p>

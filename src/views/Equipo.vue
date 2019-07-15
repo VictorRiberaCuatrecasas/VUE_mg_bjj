@@ -119,10 +119,10 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api.myjson.com/bins/pwv4b")
+      .get("https://api.myjson.com/bins/ko7lv")
       .then(respuesta => {
         this.miembros = respuesta.data.members.sort((a, b) =>
-          a.name > b.name ? 1 : -1
+          a.belt > b.belt ? 1 : -1
         );
         console.log(respuesta);
       })
