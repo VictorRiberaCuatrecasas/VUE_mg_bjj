@@ -61,13 +61,14 @@
       </v-expansion-panel-content>
     </v-expansion-panel>
 
-    <v-btn style="margin-top:2.6em" absolute top right color="black">
+    <v-btn @click="login()" id="login" style="margin-top:2.6em" absolute top right color="black">
       <v-icon style="color:white">LOG IN</v-icon>
     </v-btn>
   </div>
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   data() {
     return {
@@ -81,6 +82,21 @@ export default {
       this.panel = [];
       this.selectedPage = false;
       event.target.classList.add("selectedPage");
+    },
+
+    login: function() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(user => {
+          console.log(user);
+
+          if (user) {
+            this.$store.commit("setUser", firebase.auth().currentUser);
+          }
+        });
+      console.log("login");
     }
   }
 };
