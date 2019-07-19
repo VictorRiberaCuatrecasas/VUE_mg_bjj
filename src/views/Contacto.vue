@@ -70,7 +70,11 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="red darken-1" flat @click="dialog = false">Cerrar</v-btn>
-                <v-btn color="red darken-1" flat @click="dialog = false, sendMail()">Enviar</v-btn>
+                <v-btn
+                  color="red darken-1"
+                  flat
+                  @click="dialog = false, sendMail(), playSound(href='http://soundbible.com/mp3/Click%20On-SoundBible.com-1697535117.mp3')"
+                >Enviar</v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
@@ -158,6 +162,12 @@ export default {
   }),
 
   methods: {
+    playSound(sound) {
+      if (sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    },
     sendMail() {
       Email.send({
         Host: "smtp.mailgun.org",
@@ -179,7 +189,7 @@ export default {
           this.fili +
           "<br> MENSAJE: " +
           this.msg
-      }).then(message => alert("Tu mensaje ha sido enviado"));
+      }).then(message => alert("Tu mensaje ha sido enviado."));
     }
   }
 };

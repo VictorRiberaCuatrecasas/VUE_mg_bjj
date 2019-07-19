@@ -6,13 +6,17 @@ import Equipo from "./views/Equipo.vue";
 import Tecnicas from "./views/Tecnicas.vue";
 import Galeria from "./views/Galeria.vue";
 import Horarios from "./views/Horarios.vue";
-import Chat from "./views/Chat.vue";
+import Comentarios from "./views/Comentarios.vue";
 import Contacto from "./views/Contacto.vue";
 import Cinturones from "./views/Cinturones.vue";
 
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
+  // scrollBehavior(to, from, savedPosition) {
+  //   return { x: 0, y: 0 };
+  // },
   routes: [
     {
       path: "/",
@@ -45,9 +49,9 @@ export default new Router({
       component: Horarios
     },
     {
-      path: "/chat",
-      name: "chat",
-      component: Chat
+      path: "/comentarios",
+      name: "comentarios",
+      component: Comentarios
     },
     {
       path: "/contacto",
