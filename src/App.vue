@@ -154,14 +154,14 @@ body {
 }
 
 /* FADE IN UP HEADER PICS */
-.headerPics {
+/* .headerPics {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-name: fadeIn;
   -webkit-animation-name: fadeIn;
-}
+} */
 
 @-webkit-keyframes fadeIn {
   0% {
