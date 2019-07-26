@@ -7,9 +7,11 @@
       </div>
 
       <div class="app-background query1">
-        <div class="main-header">
-          <h1 class="mgTitle">MG TEAM BJJ</h1>
-        </div>
+        <router-link style="text-decoration:none" to="/">
+          <div class="main-header">
+            <h1 id="mgTitle" class="mgTitle">MG TEAM BJJ</h1>
+          </div>
+        </router-link>
         <Navbar></Navbar>
         <v-content class="footer1">
           <router-view class="footer2"></router-view>

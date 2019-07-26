@@ -3,7 +3,7 @@
     <v-img class="headerPics" :src="require('@/assets/contactanosimg.png')" />
     <!-- CONTACT FORM -->
     <div class="formButton">
-      <form action>
+      <form>
         <v-layout row justify-center>
           <v-dialog v-model="dialog" persistent max-width="600px">
             <template v-slot:activator="{ on }">
@@ -11,7 +11,7 @@
             </template>
             <v-card>
               <v-card-title>
-                <span class="headline">CONTÁCTANOS</span>
+                <span style="margin:auto; color:#D32F2F" class="headline">CONTÁCTANOS</span>
               </v-card-title>
               <v-alert
                 style="margin-top:2em"
@@ -19,22 +19,35 @@
                 color="error darken-1"
                 icon="warning"
                 outline
-              >Temporalmente desabilitado.</v-alert>
+              >Asegurate de rellenar los campos obligatorios (*).</v-alert>
               <v-card-text>
                 <v-container grid-list-md>
                   <v-layout wrap>
                     <v-flex xs12 sm6 md4>
-                      <v-text-field color="red darken-2" label="Nombre*" required></v-text-field>
+                      <v-text-field
+                        color="red darken-2"
+                        :rules="nameRules"
+                        v-model="nombre"
+                        label="Nombre*"
+                        required
+                      ></v-text-field>
                     </v-flex>
 
                     <v-flex xs12>
-                      <v-text-field color="red darken-2" label="Email*" required></v-text-field>
+                      <v-text-field
+                        :rules="emailRules"
+                        color="red darken-2"
+                        v-model="mail"
+                        label="Email*"
+                        required
+                      ></v-text-field>
                     </v-flex>
                     <v-flex xs12>
-                      <v-text-field color="red darken-2" label="Teléfono"></v-text-field>
+                      <v-text-field color="red darken-2" v-model="telf" label="Teléfono"></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-autocomplete
+                        v-model="fili"
                         color="red darken-2"
                         :items="['MG Granollers', 'Animal Bjj', 'Internacional Gym']"
                         label="Filial a contactar"
@@ -42,7 +55,13 @@
                       ></v-autocomplete>
                     </v-flex>
                     <v-flex xs12>
-                      <v-textarea color="red darken-2" label="Mensaje*" required></v-textarea>
+                      <v-textarea
+                        :rules="msgRules"
+                        v-model="msg"
+                        color="red darken-2"
+                        label="Mensaje*"
+                        required
+                      ></v-textarea>
                     </v-flex>
                   </v-layout>
                 </v-container>
@@ -51,7 +70,11 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="red darken-1" flat @click="dialog = false">Cerrar</v-btn>
-                <v-btn color="red darken-1" flat @click="dialog = false">Enviar</v-btn>
+                <v-btn
+                  color="red darken-1"
+                  flat
+                  @click="dialog = false, sendMail(),sendMail2(), playSound(href='http://soundbible.com/mp3/Click%20On-SoundBible.com-1697535117.mp3')"
+                >Enviar</v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
@@ -115,12 +138,87 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   data: () => ({
-    dialog: false
-  })
+    dialog: false,
+    nombre: "",
+    mail: "",
+    telf: "",
+    fili: "",
+    msg: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+/.test(v) || "E-mail must be valid"
+    ],
+    nameRules: [
+      v => !!v || "Name is required",
+      v => (v && v.length <= 25) || "Name must be less than 25 characters"
+    ],
+    msgRules: [
+      v => !!v || "Message is required",
+      v => (v && v.length >= 20) || "Message must be more than 20 characters"
+    ]
+  }),
+
+  methods: {
+    playSound(sound) {
+      if (sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    },
+    sendMail() {
+      Email.send({
+        Host: "smtp.mailgun.org",
+        Port: 587,
+        Username:
+          "postmaster@sandbox50cfa1e90b1b48c09b59aaa8c608403b.mailgun.org",
+        Password: "a22f371d2c5490ba15c4ae0c80e2c2df-fd0269a6-361b56e4",
+        To: "victorribera92@gmail.com",
+        From: this.mail,
+        Subject: "MG envío de FORMULARIO DE CONTACTO",
+        Body:
+          "NOMBRE: " +
+          this.nombre +
+          "<br>TELEFONO: " +
+          this.telf +
+          "<br> EMAIL A RESPONDER: " +
+          this.mail +
+          "<br>FILIAL A CONTACTAR: " +
+          this.fili +
+          "<br> MENSAJE: " +
+          this.msg
+      });
+    },
+    sendMail2() {
+      Email.send({
+        Host: "smtp.mailgun.org",
+        Port: 587,
+        Username:
+          "postmaster@sandbox50cfa1e90b1b48c09b59aaa8c608403b.mailgun.org",
+        Password: "a22f371d2c5490ba15c4ae0c80e2c2df-fd0269a6-361b56e4",
+        To: "sousamaheli@gmail.com",
+        From: this.mail,
+        Subject: "MG envío de FORMULARIO DE CONTACTO",
+        Body:
+          "NOMBRE: " +
+          this.nombre +
+          "<br>TELEFONO: " +
+          this.telf +
+          "<br> EMAIL A RESPONDER: " +
+          this.mail +
+          "<br>FILIAL A CONTACTAR: " +
+          this.fili +
+          "<br> MENSAJE: " +
+          this.msg
+      }).then(message => alert("Tu mensaje ha sido enviado."));
+    }
+  }
 };
 </script>
+
+
 <style scoped>
 p {
   margin: 0;
