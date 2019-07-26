@@ -45,7 +45,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-/* @media (min-width: 750px) {
+@media (min-width: 750px) {
   .query1 {
     display: none;
   }
@@ -54,7 +54,7 @@ export default {
     text-align: center;
     padding-top: 10%;
   }
-} */
+}
 
 /* 
  >>>>ALTERNARIVE BACKGROUND WITH FIXED POSITION (DOESNT WORK WELL ON MOBILE)

@@ -17,18 +17,22 @@
         class="loginBtn loginBtn--google"
       >Login with Google</button>
     </div>
-    <div class="mensajesBox">
-      <div id="mensajes" v-for="(m,index) in mensajes" :key="index">
-        <p style="margin-bottom:0">
-          <strong>{{m.name}} :</strong>
-        </p>
+
+    <div class="mensajesBox" v-for="(m,index) in mensajes" :key="index">
+      <div id="mensajes">
+        <div class="flexAvatar">
+          <v-img class="avatar" :src="m.avatar"></v-img>
+          <p style="margin-top:13px; margin-left: 5px">
+            <strong>{{m.name}} :</strong>
+          </p>
+        </div>
         <p style="margin-top:0; margin-bottom:5px">{{m.text}}</p>
         <p style="margin-bottom:5px; font-size:12px">
           <em>Escrito el {{m.dateDay}}/{{m.dateMonth}}/{{m.dateYear}}.</em>
         </p>
       </div>
-      <div id="scrollToLast"></div>
     </div>
+    <div id="scrollToLast"></div>
 
     <v-textarea
       name="text"
@@ -57,6 +61,11 @@ export default {
 
   mounted() {
     this.getMessages();
+  },
+  computed: {
+    googleAvatar() {
+      return this.$store.getters.dataUser;
+    }
   },
   methods: {
     ossAudio() {
@@ -91,6 +100,7 @@ export default {
       let objectToSend = {
         text: this.text, // si key and value son iguales, solamente hay que poner uno.
         name: name,
+        avatar: firebase.auth().currentUser.photoURL,
         dateDay: new Date().getUTCDate(),
         dateMonth: new Date().getUTCMonth() + 1,
         dateYear: new Date().getUTCFullYear()
@@ -119,6 +129,14 @@ export default {
 </script>
 
 <style>
+.flexAvatar {
+  display: flex;
+}
+.avatar {
+  border-radius: 25px;
+  max-height: 42px;
+  max-width: 42px;
+}
 .comentarioBtn {
   width: 90%;
   margin-left: 5%;
