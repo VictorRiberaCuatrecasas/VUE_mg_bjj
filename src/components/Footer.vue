@@ -2,17 +2,17 @@
   <div class="footerDiv">
     <div class="rssLogos">
       <button style="margin-right:25px; margin-top:5px" class="footerButtons1">
-        <a href="https://www.instagram.com/mgteambarcelona/">
+        <a href="https://www.instagram.com/mgteambarcelona/" target="_blank">
           <v-img class="footerButtons" :src="require('@/assets/igLogo.png')"></v-img>
         </a>
       </button>
       <button style="margin-right:25px; margin-top:5px; " class="footerButtons1">
-        <a href="https://www.facebook.com/mgteam.bjj/">
+        <a href="https://www.facebook.com/mgteam.bjj/" target="_blank">
           <v-img class="footerButtons" :src="require('@/assets/fbLogo.png')"></v-img>
         </a>
       </button>
       <button>
-        <a href="http://jiujitsugranollers.blogspot.com/">
+        <a href="http://jiujitsugranollers.blogspot.com/" target="_blank">
           <v-img
             style="height:20px; border-radius: 25%"
             class="footerButtons"
