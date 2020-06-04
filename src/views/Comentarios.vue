@@ -75,11 +75,6 @@ export default {
     eraseText() {
       this.text = "";
     },
-
-    ossAudio() {
-      var audio = new Audio(require("../assets/audio/oss.mp3"));
-      audio.play();
-    },
     login: function() {
       var provider = new firebase.auth.GoogleAuthProvider();
       firebase
@@ -122,7 +117,6 @@ export default {
           // el on es como un eventlistener
           this.mensajes = Object.values(data.val());
         });
-      console.log(mensajes);
     }
   }
 };

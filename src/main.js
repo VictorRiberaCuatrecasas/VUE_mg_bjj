@@ -4,14 +4,22 @@ import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-//
 import { VLazyImagePlugin } from "v-lazy-image";
-Vue.use(VLazyImagePlugin);
 import AOS from "aos";
 import "aos/dist/aos.css";
 import firebase from "firebase";
+import VueAnalytics from 'vue-analytics';
+
+
+Vue.use(VLazyImagePlugin);
 
 Vue.config.productionTip = false;
+
+// Configuration VueAnalytics
+Vue.use(VueAnalytics, {
+  id: 'UA-168545292-2',
+  router
+});
 
 new Vue({
   created() {

@@ -170,8 +170,12 @@ export default {
     },
     sendMail() {
       Email.send({
-      //PRIVATE INFO HERE(PASS, HOST ETC, DELETED ON GITHUB)
-      
+        Host: "smtp.mailgun.org",
+        Port: 587,
+        Username:
+          "postmaster@sandbox50cfa1e90b1b48c09b59aaa8c608403b.mailgun.org",
+        Password: "c5065cce6be9f2e2a49c7ebef557e7be-c50f4a19-63fb4fa1",
+        To: ["victorribera92@gmail.com", "sousamaheli@gmail.com"],
         From: this.mail,
         Subject: "MG envío de FORMULARIO DE CONTACTO",
         Body:
